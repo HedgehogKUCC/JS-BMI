@@ -5,6 +5,158 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title><%= htmlWebpackPlugin.options.title %></title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/fontawesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+    />
   </head>
-  <body ontouchstart></body>
+  <body ontouchstart>
+    <div id="app">
+      <header>
+        <img
+          src="../images/BMI_Logo.png"
+          alt="BMI_LOGO"
+          width="117"
+          height="117"
+        />
+        <div class="form">
+          <label for="height">身高 cm</label>
+          <input type="text" id="height" placeholder="請輸入身高" />
+          <label for="weight">體重 kg</label>
+          <input type="text" id="weight" placeholder="請輸入體重" />
+        </div>
+        <button type="button" id="result" class="btn">
+          <p id="value">看結果</p>
+          <p id="bmi"></p>
+          <div class="icon"></div>
+        </button>
+        <span class="status">理想</span>
+      </header>
+      <section class="container">
+        <div class="title">BMI 紀錄</div>
+        <ul class="list">
+          <div class="list__record">
+            <div class="status-ideal"></div>
+            <li class="status">理想</li>
+            <li>
+              BMI
+              <span>20.90</span>
+            </li>
+            <li>
+              weight
+              <span>70kg</span>
+            </li>
+            <li>
+              height
+              <span>180cm</span>
+            </li>
+            <li>06-19-2017</li>
+            <li><i class="fas fa-times fa-2x"></i></li>
+          </div>
+          <div class="list__record">
+            <div class="status-tooLight"></div>
+            <li class="status">過輕</li>
+            <li>
+              BMI
+              <span>20.90</span>
+            </li>
+            <li>
+              weight
+              <span>70kg</span>
+            </li>
+            <li>
+              height
+              <span>180cm</span>
+            </li>
+            <li>06-19-2017</li>
+            <li><i class="fas fa-times fa-2x"></i></li>
+          </div>
+          <div class="list__record">
+            <div class="status-tooHeavy"></div>
+            <li class="status">過重</li>
+            <li>
+              BMI
+              <span>20.90</span>
+            </li>
+            <li>
+              weight
+              <span>70kg</span>
+            </li>
+            <li>
+              height
+              <span>180cm</span>
+            </li>
+            <li>06-19-2017</li>
+            <li><i class="fas fa-times fa-2x"></i></li>
+          </div>
+          <div class="list__record">
+            <div class="status-mildObesity"></div>
+            <li class="status">輕度肥胖</li>
+            <li>
+              BMI
+              <span>20.90</span>
+            </li>
+            <li>
+              weight
+              <span>70kg</span>
+            </li>
+            <li>
+              height
+              <span>180cm</span>
+            </li>
+            <li>06-19-2017</li>
+            <li><i class="fas fa-times fa-2x"></i></li>
+          </div>
+          <div class="list__record">
+            <div class="status-moderateObesity"></div>
+            <li class="status">中度肥胖</li>
+            <li>
+              BMI
+              <span>20.90</span>
+            </li>
+            <li>
+              weight
+              <span>70kg</span>
+            </li>
+            <li>
+              height
+              <span>180cm</span>
+            </li>
+            <li>06-19-2017</li>
+            <li><i class="fas fa-times fa-2x"></i></li>
+          </div>
+          <div class="list__record">
+            <div class="status-severeObesity"></div>
+            <li class="status">重度肥胖</li>
+            <li>
+              BMI
+              <span>20.90</span>
+            </li>
+            <li>
+              weight
+              <span>70kg</span>
+            </li>
+            <li>
+              height
+              <span>180cm</span>
+            </li>
+            <li>06-19-2017</li>
+            <li><i class="fas fa-times fa-2x"></i></li>
+          </div>
+        </ul>
+      </section>
+      <footer>
+        <img
+          src="../images/BMI_Footer_Logo.png"
+          alt="BMI_FOOTER"
+          width="55"
+          height="55"
+        />
+      </footer>
+    </div>
+  </body>
 </html>
