@@ -19,6 +19,12 @@ li {
 
 $primary: #FFD366;
 $secondary: #424242;
+$ideal: #86D73F;
+$tooLight: #31BAF9;
+$tooHeavy: #FF982D;
+$mildObesity: #FF6C03;
+$moderateObesity: #994000;
+$severeObesity: #FF1200;
 
 @mixin absolute($top, $left) {
   position: absolute;
@@ -32,27 +38,74 @@ $secondary: #424242;
   height: 100%;
 }
 
-.status-ideal {
+@mixin buttonStyle($color) {
+  display: block;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-color: $secondary;
+  color: $color;
+  border: 6px solid $color;
+}
+
+@mixin buttonIconStyle($color) {
+  background: url(../images/icons_loop.png) center;
+  background-repeat: no-repeat;
+  background-color: $color;
+  border: 3px solid $secondary;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  border-radius: 50%;
+  left: 70%;
+  cursor: pointer;
+}
+
+.color-ideal {
+  color: $ideal;
+}
+
+.color-tooLight {
+  color: $tooLight;
+}
+
+.color-tooHeavy {
+  color: $tooHeavy;
+}
+
+.color-mildObesity {
+  color: $mildObesity;
+}
+
+.color-moderateObesity {
+  color: $moderateObesity;
+}
+
+.color-severeObesity {
+  color: $severeObesity;
+}
+
+.border-left-ideal {
   @include border-left(#86D73F, rgba(#86D73F, 0.29));
 }
 
-.status-tooLight {
+.border-left-tooLight {
   @include border-left(#31BAF9, rgba(#31BAF9, 0.29));
 }
 
-.status-tooHeavy {
+.border-left-tooHeavy {
   @include border-left(#FF982D, rgba(#FF982D, 0.29));
 }
 
-.status-mildObesity {
+.border-left-mildObesity {
   @include border-left(#FF6C03, rgba(#FF6C03, 0.29));
 }
 
-.status-moderateObesity {
+.border-left-moderateObesity {
   @include border-left(#994000, rgba(#994000, 0.29));
 }
 
-.status-severeObesity {
+.border-left-severeObesity {
   @include border-left(#FF1200, rgba(#FF1200, 0.29));
 }
 
@@ -131,7 +184,6 @@ header {
 
   span {
     font-size: 32px;
-    color: #86D73F;
     @include absolute(137px, 829px);
   }
 }
@@ -199,4 +251,67 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.btn-ideal {
+  @include buttonStyle($ideal);
+
+  .icon {
+    @include buttonIconStyle($ideal);
+  }
+}
+
+.btn-tooLight {
+  @include buttonStyle($tooLight);
+
+  .icon {
+    @include buttonIconStyle($tooLight);
+  }
+}
+
+.btn-tooHeavy {
+  @include buttonStyle($tooHeavy);
+
+  .icon {
+    @include buttonIconStyle($tooHeavy);
+  }
+}
+
+.btn-mildObesity {
+  @include buttonStyle($mildObesity);
+
+  .icon {
+    @include buttonIconStyle($mildObesity);
+  }
+}
+
+.btn-moderateObesity {
+  @include buttonStyle($moderateObesity);
+
+  .icon {
+    @include buttonIconStyle($moderateObesity);
+  }
+}
+
+.btn-severeObesity {
+  @include buttonStyle($severeObesity);
+  .icon {
+    @include buttonIconStyle($severeObesity);
+  }
+}
+
+.btn-ideal, .btn-tooLight, .btn-tooHeavy, .btn-mildObesity, .btn-moderateObesity, .btn-severeObesity {
+  @include absolute(92px, 690px);
+  p {
+    font-size: 32px;
+    margin: 0;
+
+    &:nth-child(2) {
+      font-size: 14px;
+    }
+  }
+}
+
+#result:focus {
+  outline: none;
 }

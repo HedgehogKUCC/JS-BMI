@@ -30,124 +30,15 @@
           <input type="text" id="weight" placeholder="請輸入體重" />
         </div>
         <button type="button" id="result" class="btn">
-          <p id="value">看結果</p>
-          <p id="bmi"></p>
-          <div class="icon"></div>
+          <p id="bmiValue" class="bmiValue">看結果</p>
+          <p id="bmiText"></p>
+          <div id="buttonIcon" class="icon"></div>
         </button>
-        <span class="status">理想</span>
+        <span id="statusText"></span>
       </header>
       <section class="container">
         <div class="title">BMI 紀錄</div>
-        <ul class="list">
-          <div class="list__record">
-            <div class="status-ideal"></div>
-            <li class="status">理想</li>
-            <li>
-              BMI
-              <span>20.90</span>
-            </li>
-            <li>
-              weight
-              <span>70kg</span>
-            </li>
-            <li>
-              height
-              <span>180cm</span>
-            </li>
-            <li>06-19-2017</li>
-            <li><i class="fas fa-times fa-2x"></i></li>
-          </div>
-          <div class="list__record">
-            <div class="status-tooLight"></div>
-            <li class="status">過輕</li>
-            <li>
-              BMI
-              <span>20.90</span>
-            </li>
-            <li>
-              weight
-              <span>70kg</span>
-            </li>
-            <li>
-              height
-              <span>180cm</span>
-            </li>
-            <li>06-19-2017</li>
-            <li><i class="fas fa-times fa-2x"></i></li>
-          </div>
-          <div class="list__record">
-            <div class="status-tooHeavy"></div>
-            <li class="status">過重</li>
-            <li>
-              BMI
-              <span>20.90</span>
-            </li>
-            <li>
-              weight
-              <span>70kg</span>
-            </li>
-            <li>
-              height
-              <span>180cm</span>
-            </li>
-            <li>06-19-2017</li>
-            <li><i class="fas fa-times fa-2x"></i></li>
-          </div>
-          <div class="list__record">
-            <div class="status-mildObesity"></div>
-            <li class="status">輕度肥胖</li>
-            <li>
-              BMI
-              <span>20.90</span>
-            </li>
-            <li>
-              weight
-              <span>70kg</span>
-            </li>
-            <li>
-              height
-              <span>180cm</span>
-            </li>
-            <li>06-19-2017</li>
-            <li><i class="fas fa-times fa-2x"></i></li>
-          </div>
-          <div class="list__record">
-            <div class="status-moderateObesity"></div>
-            <li class="status">中度肥胖</li>
-            <li>
-              BMI
-              <span>20.90</span>
-            </li>
-            <li>
-              weight
-              <span>70kg</span>
-            </li>
-            <li>
-              height
-              <span>180cm</span>
-            </li>
-            <li>06-19-2017</li>
-            <li><i class="fas fa-times fa-2x"></i></li>
-          </div>
-          <div class="list__record">
-            <div class="status-severeObesity"></div>
-            <li class="status">重度肥胖</li>
-            <li>
-              BMI
-              <span>20.90</span>
-            </li>
-            <li>
-              weight
-              <span>70kg</span>
-            </li>
-            <li>
-              height
-              <span>180cm</span>
-            </li>
-            <li>06-19-2017</li>
-            <li><i class="fas fa-times fa-2x"></i></li>
-          </div>
-        </ul>
+        <ul class="list"></ul>
       </section>
       <footer>
         <img
