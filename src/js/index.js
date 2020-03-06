@@ -14,7 +14,9 @@ const bmiText = document.getElementById('bmiText')
 const statusText = document.getElementById('statusText')
 const buttonIcon = document.getElementById('buttonIcon')
 
-let record = []
+let record = JSON.parse(localStorage.getItem('bmiData')) || []
+
+updateList(record)
 
 result.addEventListener('click', calcBMI)
 list.addEventListener('click', deleteList)
@@ -82,6 +84,7 @@ function calcBMI(e) {
     }
 
     record.push(data)
+    localStorage.setItem('bmiData', JSON.stringify(record))
 
     updateList(record)
 
@@ -102,6 +105,7 @@ function deleteList(e) {
   let index = e.target.dataset.index
   record.splice(index, 1)
 
+  localStorage.setItem('bmiData', JSON.stringify(record))
   updateList(record)
 }
 
