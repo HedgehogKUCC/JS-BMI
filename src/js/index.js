@@ -22,13 +22,7 @@ result.addEventListener('click', calcBMI)
 list.addEventListener('click', deleteList)
 h.addEventListener('blur', checkValue)
 w.addEventListener('blur', checkValue)
-buttonIcon.addEventListener('click', function() {
-  result.setAttribute('class', 'btn')
-  bmiValue.textContent = '看結果'
-  bmiText.textContent = ''
-  statusText.textContent = ''
-  bmiValue.setAttribute('class', 'bmiValue')
-})
+buttonIcon.addEventListener('click', refresh)
 
 function calcBMI(e) {
   if(e.target.nodeName === 'DIV') { return }
@@ -144,4 +138,12 @@ function checkValue(e) {
     alert('尚未填入數字') 
     return
   }
+}
+
+function refresh() {
+  result.setAttribute('class', 'btn')
+  bmiValue.textContent = '看結果'
+  bmiText.textContent = ''
+  statusText.textContent = ''
+  bmiValue.setAttribute('class', 'bmiValue')
 }
